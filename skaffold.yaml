@@ -1,0 +1,10 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  artifacts:
+  - image: website
+    context: src/website
+deploy:
+  kubectl:
+    manifests:
+    - src/website/k8s/deployment.yaml
